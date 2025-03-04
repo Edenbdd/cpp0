@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:45:56 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 13:05:23 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 16:07:26 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
     while (1)
     {
         std::cout << "Please enter a command: ";
-        std::cin >> cmd_line;
+        getline(std::cin, cmd_line);
         if (cmd_line.compare("EXIT") == 0)
             break;
         else if (cmd_line.compare("ADD") == 0)
