@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:45:56 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 11:11:58 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 11:49:38 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 // #include <iomanip>
 #include <string>
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 int    add(PhoneBook book)
 {
@@ -21,10 +22,10 @@ int    add(PhoneBook book)
     Contact current;
 
     i = 0;
-    current = getpbook(book.pbook[i]);
-    while (i < 8 && get_firstname(current._first_name))
+    current = PhoneBook::get_pbook();
+    while (i < 8 && Contact::get_first_name())
     {
-        current = getpbook(book.pbook[i]);
+        current = PhoneBook::get_pbook();
         i++;
     }    
     std::cout << "Please enter new contact informations" << std::endl;

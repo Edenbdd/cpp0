@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:57:32 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 11:40:25 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 11:47:20 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Contact
         Contact(int const i, std::string fname,
             std::string lname, std::string nname,
             std::string pnb, std::string secret);
+        Contact();
         ~Contact(void);
         int const         get_index(void);
         std::string const get_first_name(void);
