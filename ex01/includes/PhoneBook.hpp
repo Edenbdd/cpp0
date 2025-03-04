@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:55:12 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 13:00:05 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:25:28 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 class PhoneBook
 {
@@ -23,6 +26,8 @@ class PhoneBook
         Contact  *get_pbook(void);
         int add();
         int search();
+        int display();
+        int debug();
     private: //idk if this could/should be const ?
         Contact pbook[7];
 };

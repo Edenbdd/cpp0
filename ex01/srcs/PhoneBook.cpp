@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 10:15:38 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 16:20:12 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:42:00 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,96 @@ int PhoneBook::add()
     return (0);
 }
 
+int PhoneBook::debug()
+{
+    Contact current;
+    int     i;
+    
+    std::cout << "Here is your phone book:" << std::endl;
+    i = 0;
+    while (i < 8 && this->get_pbook()[i].get_index() != -1)
+    {
+        current = this->get_pbook()[i];
+        std::cout << "Index: " << current.get_index() << std::endl;
+        std::cout << "First name: " << current.get_first_name() << std::endl;
+        std::cout << "Last name: " << current.get_last_name() << std::endl;
+        std::cout << "Nickname: " << current.get_nickname() << std::endl;
+        std::cout << "Phone number: " << current.get_phonenumber() << std::endl;
+        std::cout << "Darkest secret: " << current.get_secret() << std::endl;
+        i++;
+    }
+    std::cout << "End of your phone book" << std::endl;
+    return (0);
+}
+
+int PhoneBook::display()
+{
+    std::string fname;
+    std::string lname;
+    std::string nname;
+    Contact     current;
+    int         i;
+
+    std::cout << "PhoneBook display called" << std::endl;
+    i = 0;
+    while (i < 8 && this->get_pbook()[i].get_index() != -1)
+    {
+        fname = current.get_first_name();
+        if (fname.length() >= 10)
+        {
+            fname.substr(0, 9);
+            fname.replace(9, 9, ".");
+        }
+        lname = current.get_last_name();
+        if (lname.length() >= 10)
+        {
+            lname.substr(0, 9);
+            lname.replace(9, 9, ".");
+        }
+        nname = current.get_nickname();
+        if (nname.length() >= 10)
+        {
+            nname.substr(0, 9);
+            nname.replace(9, 9, ".");
+        }
+        std::cout << std::setw(10);
+        std::cout << current.get_index();
+        std::cout << "|";
+        std::cout << std::setw(10);
+        std::cout << fname;
+        std::cout << "|";
+        std::cout << std::setw(10);
+        std::cout << lname;
+        std::cout << "|";
+        std::cout << std::setw(10);
+        std::cout << nname;
+        std::cout << std::endl;
+        i++;
+    }
+    return (0);
+}
+
 int PhoneBook::search()
 {
+    std::string line;
+    Contact     current;
+    int         i;
+
     std::cout << "PhoneBook search called" << std::endl;
+    this->display();
+    std::cout << "Please enter the index of the contact you want to display: " << std::endl;
+    std::cin >> i;
+    if (i < 0 || i > 7)
+    {
+        std::cout << "Wrong index, please try to search again" << std::endl;
+        return (-1);
+    }
+    current = this->get_pbook()[i];
+    std::cout << "Index: " << current.get_index() << std::endl;
+    std::cout << "First name: " << current.get_first_name() << std::endl;
+    std::cout << "Last name: " << current.get_last_name() << std::endl;
+    std::cout << "Nickname: " << current.get_nickname() << std::endl;
+    std::cout << "Phone number: " << current.get_phonenumber() << std::endl;
+    std::cout << "Darkest secret: " << current.get_secret() << std::endl;
     return (0);
 }
