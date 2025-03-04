@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 10:15:42 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 13:46:03 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/04 13:55:45 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,34 @@ std::string    Contact::get_phonenumber(void)
 std::string    Contact::get_secret(void)
 {
     return this->_secret;
+}
+
+int         Contact::set_index(int ind)
+{
+    return (0);
+}
+
+int         Contact::set_first_name(std::string fname)
+{
+    return (0);
+}
+
+int         Contact::set_last_name(std::string lname)
+{
+    return (0);
+}
+
+int         Contact::set_nickname(std::string nname)
+{
+    return (0);
+}
+
+int         Contact::set_phonenumber(std::string pnb)
+{
+    return (0);
+}
+
+int         Contact::set_secret(std::string secret)
+{
+    return (0);
 }
