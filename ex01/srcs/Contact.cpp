@@ -6,23 +6,15 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 10:15:42 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 17:11:11 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/05 10:45:49 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(void): _index(-1)
-{
-    std::cout << "Contact constructor called" << std::endl; 
-    return;
-}
+Contact::Contact(void): _index(-1){}
 
-Contact::~Contact(void)
-{
-    std::cout << "Contact destructor called" << std::endl; 
-    return;
-}
+Contact::~Contact(void){}
 
 int    Contact::get_index(void)
 {

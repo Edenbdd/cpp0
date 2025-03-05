@@ -6,7 +6,7 @@
 /*   By: aubertra <aubertra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 09:55:12 by aubertra          #+#    #+#             */
-/*   Updated: 2025/03/04 17:25:28 by aubertra         ###   ########.fr       */
+/*   Updated: 2025/03/05 10:45:59 by aubertra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class PhoneBook
         PhoneBook(void);
         ~PhoneBook(void);
         Contact  *get_pbook(void);
-        int add();
+        int add(int *oldest);
         int search();
         int display();
-        int debug();
-    private: //idk if this could/should be const ?
-        Contact pbook[7];
+        // int debug();
+    private:
+        Contact pbook[8];
 };
 
 #endif
